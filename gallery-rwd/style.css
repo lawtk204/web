@@ -1,0 +1,57 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Gallery mặc định: 4 ảnh mỗi dòng */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 25%;
+    padding: 6px;
+    border: 1px solid #ddd;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.description {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Màn hình từ 501px đến 700px: 2 ảnh mỗi dòng */
+@media screen and (max-width: 700px) {
+    .gallery-item {
+        width: 50%;
+    }
+}
+
+/* Màn hình 500px trở xuống: 1 ảnh mỗi dòng */
+@media screen and (max-width: 500px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
