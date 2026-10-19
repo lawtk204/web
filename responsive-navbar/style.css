@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f6f8;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 15px 25px;
+    color: white;
+    background-color: #333;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Danh sách liên kết trên desktop */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 8px 5px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #61dafb;
+}
+
+/* Nút menu chỉ hiển thị trên mobile */
+.menu-icon {
+    display: none;
+    padding: 4px 8px;
+    color: white;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Nội dung trang */
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 15px;
+    color: #245b83;
+}
+
+.content p {
+    line-height: 1.7;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #484848;
+    }
+
+    .nav-links a {
+        padding: 14px;
+    }
+
+    .nav-links a:hover {
+        background-color: #484848;
+    }
+
+    .content {
+        margin-top: 30px;
+    }
+}
