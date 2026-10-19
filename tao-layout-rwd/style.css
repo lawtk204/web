@@ -1,0 +1,189 @@
+
+/* Cài đặt chung */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f4f7;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* Header */
+.header {
+    background-color: #2878b5;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+/* Menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #2878b5;
+}
+
+/* Bố cục chính */
+.main {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 0 0 25%;
+    background-color: #e8eef3;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.sidebar h2 {
+    margin-bottom: 12px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #2878b5;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Nội dung */
+.content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+}
+
+.content h2 {
+    margin-bottom: 12px;
+}
+
+.content > p {
+    margin-bottom: 20px;
+}
+
+/* Các thẻ nội dung */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    flex: 1 1 180px;
+    padding: 20px;
+    background-color: #f0f6fb;
+    border: 1px solid #d4e4f0;
+    border-radius: 6px;
+}
+
+.card h3 {
+    color: #2878b5;
+    margin-bottom: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* Responsive cho máy tính bảng */
+@media screen and (max-width: 768px) {
+    .main {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .sidebar {
+        flex-basis: 30%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Responsive cho điện thoại */
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 25px 12px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .main {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .sidebar,
+    .content {
+        width: 100%;
+    }
+
+    .sidebar {
+        flex-basis: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-basis: auto;
+    }
+}
