@@ -1,0 +1,98 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f2f4f7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #245b8f;
+    margin-bottom: 30px;
+}
+
+.example {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #00000012;
+}
+
+.example h2 {
+    color: #245b8f;
+    font-size: 20px;
+}
+
+.example p {
+    color: #555;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+/* Thiết lập Grid chung */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 15px;
+}
+
+.grid-container div {
+    padding: 20px;
+    text-align: center;
+    background-color: lightblue;
+    border: 1px solid #7bb5d8;
+    border-radius: 5px;
+}
+
+/* Ví dụ 1: Khoảng cách hàng và cột là 20px */
+.grid-example-1 {
+    grid-gap: 20px;
+}
+
+/* Ví dụ 2: Hàng cách 30px, cột cách 10px */
+.grid-example-2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 30px 10px;
+}
+
+.grid-example-2 div {
+    background-color: lightgreen;
+    border-color: #83bd83;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .example {
+        padding: 12px;
+    }
+
+    .example h2 {
+        font-size: 17px;
+    }
+
+    .grid-container div {
+        padding: 15px 8px;
+    }
+}
